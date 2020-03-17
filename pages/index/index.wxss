@@ -1,0 +1,8 @@
+.btns {
+  padding: 12px 0;
+  display: flex;
+}
+
+.text {
+  word-wrap: break-word;
+}

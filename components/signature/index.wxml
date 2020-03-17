@@ -1,0 +1,9 @@
+<canvas
+  disable-scroll
+  id="{{canvasId}}"
+  canvas-id="{{canvasId}}"
+  bindtouchstart="bindtouchstart"
+  bindtouchmove="bindtouchmove"
+  style="width:{{width}}px;height:{{height}}px;background-color:#e9e9e9;"
+>
+</canvas>

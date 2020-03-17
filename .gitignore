@@ -1,0 +1,35 @@
+# Windows
+[Dd]esktop.ini
+Thumbs.db
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+
+# Node.js
+node_modules/
+
+# Other
+logs
+*.log
+npm-debug.log*
+pids
+*.pid
+*.seed
+*.pid.lock
+lib-cov
+coverage
+.nyc_output
+node_modules
+jspm_packages
+.npm
+.node_repl_history
+.idea
+.idea/*
+/src/utils/request-temp.js
+dist
+package-lock.json
