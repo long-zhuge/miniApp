@@ -14,6 +14,14 @@
       fail: () => {},
     });
 
+    // 父组件调用获取图片本地路径
+    this.selectComponent('#myComponent').getFilePath({
+      success: (res) => {
+        console.log(res);
+      },
+      fail: () => {},
+    });
+
     // 清除
     this.selectComponent('#myComponent').clear();
 
@@ -83,7 +91,7 @@ Component({
         success = () => {},
         fail = () => {},
       } = params;
-      if (this.data.isValue) {
+      if (this.check()) {
         wx.canvasGetImageData({
           canvasId: this.data.canvasId,
           x: 0,
@@ -97,11 +105,40 @@ Component({
           },
           fail(e) { fail(e) },
         }, this); // 自定义组件中，必须传入当前组件的 this 对象
+      }
+    },
+
+    // 获取图片的本地路径
+    getFilePath(params = {}) {
+      const {
+        success = () => {},
+        fail = () => {},
+      } = params;
+      if (this.check()) {
+        wx.canvasToTempFilePath({
+          canvasId: this.data.canvasId,
+          x: 0,
+          y: 0,
+          width: this.data.width,
+          height: this.data.height,
+          success (res) {
+            success(res.tempFilePath);
+          },
+          fail(e) { fail(e) },
+        }, this); // 自定义组件中，必须传入当前组件的 this 对象
+      }
+    },
+
+    // 签名的非空校验
+    check() {
+      if (this.data.isValue) {
+        return true;
       } else {
         wx.showToast({
           icon: 'none',
           title: '请签名',
-        })
+        });
+        return false;
       }
     },
 

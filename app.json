@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/signature/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
