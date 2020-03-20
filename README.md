@@ -1,4 +1,4 @@
-## signature
+## ✨signature
 
 > canvas 的签名版，一般用于有效身份的信息录入，合同签署等。
 
@@ -37,3 +37,17 @@ getFilePath({
   fail: (error) => {},
 })
 ```
+
+## ✨link
+
+> 类似 React.router.link 的功能，用于页面跳转
+
+### wxml-API
+
+|参数|说明|类型|默认值|
+|:--|:--|:--|:--|
+|to|前往的地址|string|''|
+|block|是否为块级元素|boolean|false|
+|allow|是否允许跳转|boolean|true|
+|ry-class|样式类|string|''|
+|bind:before|跳转前执行的函数|function|-|

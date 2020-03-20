@@ -1,0 +1,10 @@
+<block wx:if="{{ block }}">
+  <view bindtap="goto" class="ry-class">
+    <slot></slot>
+  </view>
+</block>
+<block wx:else>
+  <text bindtap="goto" class="ry-class ry-link-inline-block">
+    <slot></slot>
+  </text>
+</block>
