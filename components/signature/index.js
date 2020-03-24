@@ -40,7 +40,7 @@ Component({
     },
     width: {
       type: Number,
-      value: wx.getSystemInfoSync().windowWidth,
+      value: wx.getSystemInfoSync().windowWidth - 2,
     },
     height: {
       type: Number,
