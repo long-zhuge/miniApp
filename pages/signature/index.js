@@ -1,19 +1,28 @@
 Page({
   data: {
-    base64: '',
+    text: '',
   },
 
-  get() {
+  getBase64() {
     const that = this;
     that.selectComponent('#myComponent').getBase64({
       success: (res) => {
-        that.setData({ base64: res });
+        that.setData({ text: res });
+      },
+    });
+  },
+
+  getFilePath() {
+    const that = this;
+    that.selectComponent('#myComponent').getFilePath({
+      success: (res) => {
+        that.setData({ text: res });
       },
     });
   },
 
   clear() {
     this.selectComponent('#myComponent').clear();
-    this.setData({ base64: '' });
+    this.setData({ text: '' });
   },
 });

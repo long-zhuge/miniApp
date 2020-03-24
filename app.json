@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/table/index",
     "pages/signature/index"
   ],
   "window": {
@@ -8,6 +10,5 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,14 @@
+<view class="table ry-class">
+  <view class="tr">
+    <block wx:for="{{ columns }}" wx:for-item="item" wx:key="index">
+      <view class="th">{{ item.title }}</view>
+    </block>
+  </view>
+  <block wx:for="{{ dataSource }}" wx:for-item="item" wx:key="index">
+    <view class="tr">
+      <block wx:for="{{ columns }}" wx:for-item="item2" wx:key="index2">
+        <view class="td">{{ item[item2.dataIndex] }}</view>
+      </block>
+    </view>
+  </block>
+</view>

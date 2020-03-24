@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #f8f8f8;
+}
+
+.item {
+  flex: 1;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}

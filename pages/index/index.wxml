@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="item">
+    <ry-link block to="/pages/table/index">
+      table
+    </ry-link>
+  </view>
+  <view class="item">
+    <ry-link block to="/pages/signature/index">
+      signature
+    </ry-link>
+  </view>
+</view>

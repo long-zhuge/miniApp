@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "ry-link": "../../components/link/index"
+  }
+}

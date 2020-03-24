@@ -1,8 +1,9 @@
 <view class="container">
   <signature id="myComponent" />
   <view class="btns">
-    <button bindtap="get" type="primary">获取base64</button>
+    <button bindtap="getBase64" type="primary">获取base64</button>
+    <button bindtap="getFilePath" type="primary">获取filePath</button>
     <button bindtap="clear" type="warn">清除</button>
   </view>
-  <view class="text">{{ base64 }}</view>
+  <view class="text">{{ text }}</view>
 </view>
