@@ -4,39 +4,16 @@
 
 - [demo](https://github.com/long-zhuge/miniApp/tree/master/pages/signature)
 
-### wxml-API
+### API
 
 |参数|说明|类型|默认值|
 |:--|:--|:--|:--|
 |canvasId|画布id|string|'signature_canvas'|
 |width|画布宽度|number|wx.getSystemInfoSync().windowWidth，设备可用宽度|
 |height|画布高度|number|200|
-
-### js-API
-
-|参数|说明|类型|默认值|
-|:--|:--|:--|:--|
-|getBase64|将画布内容转为base64|function|-|
-|getFilePath|获取画布的本地链接地址，可以使用 wx.uploadFile 将本地链接地址以 form-data 的形式提交给后端进行存储|function|-|
-|clear|清除画布|function|-|
-
-#### getBase64
-
-```
-getBase64({
-  success: (res) => {},
-  fail: (error) => {},
-})
-```
-
-#### getFilePath
-
-```
-getFilePath({
-  success: (res) => {},
-  fail: (error) => {},
-})
-```
+|visible|是否展示画布|boolean|false|
+|onCancel|浮层关闭的回调函数|function|-|
+|onOk|确认的回调函数，返回 filePath 和 base64 数据|function({ detail })|-|
 
 ## ✨link
 

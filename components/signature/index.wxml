@@ -1,9 +1,25 @@
-<canvas
-  disable-scroll
-  id="{{canvasId}}"
-  canvas-id="{{canvasId}}"
-  bindtouchstart="bindtouchstart"
-  bindtouchmove="bindtouchmove"
-  style="width:{{width}}px;height:{{height}}px;border: 1px dashed #d8d8d8;"
->
-</canvas>
+<view class="drawer-container {{visible ? '' : 'none'}}">
+  <view class="drawer-body">
+    <view class="drawer-header">
+      <text class="drawer-left-extra" bindtap="onCancel">关闭</text>
+      <text class="drawer-title">绘制签名</text>
+      <text class="drawer-right-extra clear-color" bindtap="_onClear">清除</text>
+    </view>
+    <view class="drawer-content">
+      <view class="drawer-input">
+        <canvas
+          disable-scroll
+          id="{{canvasId}}"
+          canvas-id="{{canvasId}}"
+          bindtouchstart="_bindtouchstart"
+          bindtouchmove="_bindtouchmove"
+          style="width:{{width-32}}px;height:{{height}}px;border: 1px dashed #d8d8d8;"
+        >
+        </canvas>
+      </view>
+    </view>
+    <view class="drawer-footer">
+      <button class="primary-button" bindtap="onOk">确认签名</button>
+    </view>
+  </view>
+</view>
