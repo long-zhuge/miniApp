@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/charts/index",
     "pages/index/index",
     "pages/table/index",
     "pages/signature/index"
